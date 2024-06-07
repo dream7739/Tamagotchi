@@ -123,6 +123,7 @@ extension SettingViewController : UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(vc, animated: true)
         case 1:
             let vc = ViewController()
+            vc.viewType = .edit
             navigationController?.pushViewController(vc, animated: true)
         case 2:
             print("초기화 할거에요")

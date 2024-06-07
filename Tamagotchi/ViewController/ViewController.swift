@@ -8,15 +8,23 @@
 import UIKit
 import SnapKit
 
+enum ViewType: String {
+    case select = "다마고치 선택하기"
+    case edit = "다마고치 변경하기"
+    
+}
+
 class ViewController: UIViewController {
 
     let tamaCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     
     let list = TamaResult.tamaList
     
+    var viewType: ViewType = .select
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView("다마고치 선택하기")
+        configureView(viewType.rawValue)
         configureHierarchy()
         configureLayout()
         configureUI()

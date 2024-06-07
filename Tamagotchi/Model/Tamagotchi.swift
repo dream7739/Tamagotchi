@@ -50,7 +50,12 @@ enum TamaType: Int, CaseIterable {
 //다마고치는 멘트를 가짐. 멘트는 메인화면 / 밥먹을 때 / 물 마실 때에 따라 달라짐 (대장님 포함)
 //모든 다마고치는 한명의 대장님을 가짐. 대장님은 바뀔 수 있음
 
-struct Tamagotchi {
+class Tamagotchi {
+    
+    init(type: TamaType, name: String) {
+        self.type = type
+        self.name = name
+    }
     
     static let riceLimit = 99
     
@@ -113,7 +118,7 @@ struct Tamagotchi {
 }
 
 
-struct TamaResult {
+class TamaResult {
     static var ownerName: String = "대장"
     
     static var tamaList: [Tamagotchi] = [

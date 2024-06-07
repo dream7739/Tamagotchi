@@ -32,14 +32,7 @@ class MainViewController: UIViewController {
     
     let waterButton = UIButton(type: .system)
     
-    var tama: Tamagotchi? {
-        didSet {
-            guard let tama else { return }
-            tamaImageView.image = tama.tamaImage
-            mentLabel.text = tama.ment
-            descriptionLabel.text = tama.description
-        }
-    }
+    var tama: Tamagotchi?
     
     override func viewWillAppear(_ animated: Bool) {
         configureView("\(TamaResult.ownerName)님의 다마고치")
@@ -204,11 +197,12 @@ class MainViewController: UIViewController {
     }
     
     @objc func riceButtonClicked(){
+        guard let tama else { return }
         
         let input = riceTextField.text!
         
         if input.isEmpty {
-            tama?.rice += 1
+            tama.rice += 1
         }else{
             riceTextField.text = ""
             
@@ -217,16 +211,19 @@ class MainViewController: UIViewController {
                 return
             }
             
-            tama?.rice += quantity
+            tama.rice  += quantity
         }
+        
+        updateUI()
     }
     
     @objc func waterButtonClicked(){
-        
+        guard let tama else { return }
+
         let input = waterTextField.text!
         
         if input.isEmpty {
-            tama?.water += 1
+            tama.water += 1
         }else{
             waterTextField.text = ""
             
@@ -235,8 +232,11 @@ class MainViewController: UIViewController {
                 return
             }
             
-            tama?.water += quantity
+            tama.water += quantity
         }
+        
+        updateUI()
+
     }
     
     func configureData(){
@@ -245,6 +245,12 @@ class MainViewController: UIViewController {
         tamaImageView.image = tama.tamaImage
         nameLabel.text = tama.name
         descriptionLabel.text = tama.description
+    }
+    
+    func updateUI(){
+        tamaImageView.image = tama!.tamaImage
+        descriptionLabel.text = tama!.description
+        mentLabel.text = tama!.ment
     }
     
     

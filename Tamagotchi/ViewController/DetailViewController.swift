@@ -138,7 +138,7 @@ class DetailViewController : UIViewController {
     
     func configureData(){
         guard let tama else { return }
-
+        
         tamaImageView.image = tama.tamaImage
         nameLabel.text = tama.name
         descriptionLabel.text = tama.type.desciption
