@@ -73,13 +73,13 @@ class Tamagotchi {
     
     var rice: Int = 0 {
         didSet{
-            ment = "\(TamaResult.ownerName)님 오늘 과제 하셨어용?"
+            ment = "\(TamaManager.owner)님 " + TamaResult.randomMent.randomElement()!
         }
     }
     
     var water: Int = 0 {
         didSet{
-            ment = "\(TamaResult.ownerName)님 오늘 깃허브 푸시 하셨어용?"
+            ment = "\(TamaManager.owner)님 " + TamaResult.randomMent.randomElement()!
         }
     }
     
@@ -119,7 +119,21 @@ class Tamagotchi {
 
 
 class TamaResult {
-    static var ownerName: String = "대장"
+    static var randomMent : [String] = [
+        "과제하셨어용?",
+        "깃허브 푸시하셨어용?",
+        "배고파용 ㅠㅠ 밥주세요",
+        "테이블뷰 연습하셨어용??",
+        "오늘은 왠지 기분이 좋아용",
+        "오늘 점심은 뭐에용?",
+        "목말라요~~~",
+        "루피는 귀여워용ㅎㅎ",
+        "졸려용 ㅠ_ㅠ",
+        "피자 사주세용",
+        "치킨 사주세용",
+        "짜장면 먹고싶어용",
+        "오늘은 왠지 기분이 좋아용"
+    ]
     
     static var tamaList: [Tamagotchi] = [
         Tamagotchi(type: TamaType.tingle, name: TamaType.tingle.tamaName),

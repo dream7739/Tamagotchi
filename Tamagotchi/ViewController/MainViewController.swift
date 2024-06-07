@@ -35,7 +35,8 @@ class MainViewController: UIViewController {
     var tama: Tamagotchi?
     
     override func viewWillAppear(_ animated: Bool) {
-        configureView("\(TamaResult.ownerName)님의 다마고치")
+        configureView("\(TamaManager.owner)님의 다마고치")
+        mentLabel.text = "\(TamaManager.owner)님 " + TamaResult.randomMent.randomElement()!
     }
     
     override func viewDidLoad() {
@@ -241,7 +242,6 @@ class MainViewController: UIViewController {
     
     func configureData(){
         guard let tama else { return }
-        mentLabel.text = tama.ment
         tamaImageView.image = tama.tamaImage
         nameLabel.text = tama.name
         descriptionLabel.text = tama.description

@@ -40,7 +40,7 @@ class OwnerViewController: UIViewController {
         if input.trimmingCharacters(in: .whitespaces).count < 2 {
             validLabel.text = "닉네임은 2글자에서 6글자 사이입니다"
         }else{
-            TamaResult.ownerName = ownerTextField.text!
+            TamaManager.owner = ownerTextField.text!
             navigationController?.popViewController(animated: true)
         }
         
@@ -69,7 +69,7 @@ class OwnerViewController: UIViewController {
         ownerTextField.delegate = self
         
         ownerTextField.borderStyle = .roundedRect
-        ownerTextField.text = TamaResult.ownerName
+        ownerTextField.text = TamaManager.owner
         ownerTextField.placeholder = "대장님 이름을 입력해주세요"
         ownerTextField.font = TamaFont.primary.medium()
         ownerTextField.textColor = .contentColor

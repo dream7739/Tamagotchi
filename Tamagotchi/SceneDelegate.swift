@@ -18,9 +18,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let vc = ViewController()
-        let nav = UINavigationController(rootViewController: vc)
-        window?.rootViewController = nav
+        
+        if TamaManager.isInitial {
+            let vc = ViewController()
+            let nav = UINavigationController(rootViewController: vc)
+            window?.rootViewController = nav
+        }else {
+            let vc =  MainViewController()
+            vc.tama = Tamagotchi(type: .tingle, name: TamaType.tingle.tamaName)
+            let nav = UINavigationController(rootViewController: vc)
+            window?.rootViewController = nav
+        }
+        
         window?.makeKeyAndVisible()
         
     }

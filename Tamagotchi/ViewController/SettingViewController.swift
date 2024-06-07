@@ -27,7 +27,7 @@ enum Setting : Int, CaseIterable {
     var subtitle: String {
         switch self{
         case .name:
-            return TamaResult.ownerName
+            return TamaManager.owner
         case .change, .reset:
             return ""
         }

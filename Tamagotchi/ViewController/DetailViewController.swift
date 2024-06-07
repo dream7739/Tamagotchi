@@ -130,6 +130,7 @@ class DetailViewController : UIViewController {
     @objc func startButtonClicked(){
         let vc = MainViewController()
         vc.tama = tama
+        TamaManager.isInitial = false
         let nav = UINavigationController(rootViewController: vc)
         nav.modalTransitionStyle = .crossDissolve
         nav.modalPresentationStyle = .fullScreen

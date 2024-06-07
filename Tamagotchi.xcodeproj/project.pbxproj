@@ -22,6 +22,7 @@
 		88B640CC2C11AC2700B62D80 /* TamaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B640CB2C11AC2700B62D80 /* TamaCollectionViewCell.swift */; };
 		88B640CE2C11AC5500B62D80 /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B640CD2C11AC5500B62D80 /* ReusableProtocol.swift */; };
 		88B640D02C11AEB300B62D80 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B640CF2C11AEB300B62D80 /* Tamagotchi.swift */; };
+		88BBFB442C1336280044FD06 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BBFB432C1336280044FD06 /* UserDefaultsManager.swift */; };
 		88FF204D2C11E0F700DFC8CC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF204C2C11E0F700DFC8CC /* UIViewController+Extension.swift */; };
 		88FF204F2C11E15E00DFC8CC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF204E2C11E15E00DFC8CC /* UIColor+Extension.swift */; };
 		88FF20512C11E2F200DFC8CC /* TamaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF20502C11E2F200DFC8CC /* TamaFont.swift */; };
@@ -45,6 +46,7 @@
 		88B640CB2C11AC2700B62D80 /* TamaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaCollectionViewCell.swift; sourceTree = "<group>"; };
 		88B640CD2C11AC5500B62D80 /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
 		88B640CF2C11AEB300B62D80 /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
+		88BBFB432C1336280044FD06 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		88FF204C2C11E0F700DFC8CC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		88FF204E2C11E15E00DFC8CC /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		88FF20502C11E2F200DFC8CC /* TamaFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaFont.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		88B640B12C11A8EB00B62D80 /* Tamagotchi */ = {
 			isa = PBXGroup;
 			children = (
+				88BBFB432C1336280044FD06 /* UserDefaultsManager.swift */,
 				880A2E132C12F5B6005C564D /* ViewController */,
 				880A2E122C12F5AF005C564D /* Model */,
 				880A2E112C12F5A6005C564D /* Protocol */,
@@ -236,6 +239,7 @@
 				88B640B72C11A8EB00B62D80 /* ViewController.swift in Sources */,
 				885727422C12F710006B34F1 /* SettingViewController.swift in Sources */,
 				880A2E0B2C12CA7D005C564D /* UIImage+Extension.swift in Sources */,
+				88BBFB442C1336280044FD06 /* UserDefaultsManager.swift in Sources */,
 				88B640CC2C11AC2700B62D80 /* TamaCollectionViewCell.swift in Sources */,
 				88B640CE2C11AC5500B62D80 /* ReusableProtocol.swift in Sources */,
 				88B640B32C11A8EB00B62D80 /* AppDelegate.swift in Sources */,
