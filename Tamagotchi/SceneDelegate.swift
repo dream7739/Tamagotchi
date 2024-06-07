@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = nav
         }else {
             let vc =  MainViewController()
-            vc.tama = Tamagotchi(type: .tingle, name: TamaType.tingle.tamaName)
+            vc.tama = TamaResult.tamaList[0]
             let nav = UINavigationController(rootViewController: vc)
             window?.rootViewController = nav
         }

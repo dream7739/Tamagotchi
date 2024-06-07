@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         configureHierarchy()
         configureLayout()
         configureUI()
+        dump(list)
     }
     
     func configureHierarchy(){
