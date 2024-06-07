@@ -126,9 +126,33 @@ extension SettingViewController : UITableViewDataSource, UITableViewDelegate {
             vc.viewType = .edit
             navigationController?.pushViewController(vc, animated: true)
         case 2:
-            print("초기화 할거에요")
+            let alert = UIAlertController(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가용?", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "아냐!", style: .cancel, handler: nil)
+            let confirmAction = UIAlertAction(title: "웅", style: .default) { _ in
+                
+                self.removeData()
+                
+                self.view.window?.rootViewController = ViewController()
+                
+            }
+            alert.addAction(cancelAction)
+            alert.addAction(confirmAction)
+            present(alert, animated: true)
         default:
             print("Error Value")
+        }
+    }
+    
+    func removeData(){
+        for key in UserDefaults.standard.dictionaryRepresentation().keys {
+            UserDefaults.standard.removeObject(forKey: key.description)
+        }
+        
+        for item in TamaResult.tamaList {
+            if item.type != .ready {
+                item.water = 0
+                item.rice = 0
+            }
         }
     }
     
