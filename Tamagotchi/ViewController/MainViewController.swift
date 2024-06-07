@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView("대장님의 다마고치")
+        configureView("\(TamaResult.ownerName)님의 다마고치")
         configureNav()
         configureHierarchy()
         configureLayout()

@@ -5,7 +5,7 @@
 //  Created by 홍정민 on 6/7/24.
 //
 
-import UIKit
+import UIKit 
 import SnapKit
 
 enum Setting : Int, CaseIterable {
@@ -101,19 +101,30 @@ extension SettingViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.identifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.identifier, for: indexPath) as! SettingTableViewCell
         
         let item = Setting(rawValue: indexPath.row)!
         
-        cell.imageView?.image = item.image
-        
-        cell.textLabel?.text = item.title
-        cell.textLabel?.font = TamaFont.secondary.bold()
-        
-        cell.detailTextLabel?.text = item.subtitle
-        cell.detailTextLabel?.font = TamaFont.secondary.medium()
+        cell.configureData(item)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let idx = indexPath.row
+        
+        switch idx {
+        case 0:
+            let vc = OwnerViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            let vc = ViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case 2:
+            print("초기화 할거에요")
+        default:
+            print("Error Value")
+        }
     }
     
     
