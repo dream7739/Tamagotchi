@@ -85,15 +85,19 @@ class MainViewController: UIViewController {
         bubbleImageView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(40)
             make.centerX.equalToSuperview()
+            make.height.equalTo(140)
+            make.width.equalToSuperview().multipliedBy(0.6)
+
         }
         
         mentLabel.snp.makeConstraints { make in
-            make.horizontalEdges.equalTo(bubbleImageView).inset(10)
-            make.centerY.equalTo(bubbleImageView).offset(-7)
+            make.horizontalEdges.equalTo(bubbleImageView).inset(15)
+            make.top.equalTo(bubbleImageView.snp.top).offset(15)
+            make.bottom.equalTo(bubbleImageView.snp.bottom).offset(-30)
         }
         
         tamaImageView.snp.makeConstraints { make in
-            make.top.equalTo(bubbleImageView.snp.bottom).offset(3)
+            make.top.equalTo(bubbleImageView.snp.bottom).offset(10)
             make.size.equalTo(200)
             make.centerX.equalToSuperview()
         }
@@ -141,12 +145,13 @@ class MainViewController: UIViewController {
     }
     
     func configureUI(){
+        bubbleImageView.contentMode = .scaleToFill
         bubbleImageView.image = .bubbleBox
-        bubbleImageView.contentMode = .scaleAspectFill
         
         mentLabel.font = TamaFont.primary.bold()
         mentLabel.textColor = .contentColor
         mentLabel.textAlignment = .center
+        mentLabel.numberOfLines = 0
         
         tamaImageView.contentMode = .scaleAspectFill
         
