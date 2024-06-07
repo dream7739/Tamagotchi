@@ -47,12 +47,30 @@ enum TamaType: Int, CaseIterable {
 //다마고치는 밥을 먹을 수 있음 = 처음엔 0
 //다마고치는 물을 먹을 수 있음 = 처음엔 0
 //다마고치는 이미지를 가짐. 이미지는 레벨에 따라 변경됨
+//다마고치는 멘트를 가짐. 멘트는 메인화면 / 밥먹을 때 / 물 마실 때에 따라 달라짐 (대장님 포함)
+//모든 다마고치는 한명의 대장님을 가짐. 대장님은 바뀔 수 있음
 
 struct Tamagotchi {
     var type: TamaType
     var name: String
-    var rice: Int = 0
-    var water: Int = 0
+    
+    var rice: Int = 0 {
+        didSet{
+            ment = "\(TamaResult.ownerName)님 오늘 과제 하셨어용?"
+        }
+    }
+    
+    var water: Int = 0 {
+        didSet{
+            ment = "\(TamaResult.ownerName)님 오늘 깃허브 푸시 하셨어용?"
+        }
+    }
+    
+    var ment : String = "오늘은 왠지 기분이 좋아용"
+    
+    var description: String {
+        return "LV\(level) ᐧ 밥알 \(rice)개 ᐧ 물방울 \(water)개"
+    }
     
     var level: Int {
         let result = (rice / 5) + (water / 2)
@@ -83,6 +101,8 @@ struct Tamagotchi {
 
 
 struct TamaResult {
+    static var ownerName: String = "대장"
+    
     static var tamaList: [Tamagotchi] = [
         Tamagotchi(type: TamaType.tingle, name: TamaType.tingle.tamaName),
         Tamagotchi(type: TamaType.smile, name: TamaType.smile.tamaName),
