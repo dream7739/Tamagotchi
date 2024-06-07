@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		880A2E092C12BFED005C564D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880A2E082C12BFED005C564D /* MainViewController.swift */; };
 		880A2E0B2C12CA7D005C564D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880A2E0A2C12CA7D005C564D /* UIImage+Extension.swift */; };
+		885727422C12F710006B34F1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885727412C12F710006B34F1 /* SettingViewController.swift */; };
+		885727442C12FD15006B34F1 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885727432C12FD15006B34F1 /* SettingTableViewCell.swift */; };
 		88B640B32C11A8EB00B62D80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B640B22C11A8EB00B62D80 /* AppDelegate.swift */; };
 		88B640B52C11A8EB00B62D80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B640B42C11A8EB00B62D80 /* SceneDelegate.swift */; };
 		88B640B72C11A8EB00B62D80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B640B62C11A8EB00B62D80 /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		880A2E082C12BFED005C564D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		880A2E0A2C12CA7D005C564D /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		885727412C12F710006B34F1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		885727432C12FD15006B34F1 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		88B640AF2C11A8EB00B62D80 /* Tamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B640B22C11A8EB00B62D80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88B640B42C11A8EB00B62D80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		880A2E0C2C12F573005C564D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				88FF204C2C11E0F700DFC8CC /* UIViewController+Extension.swift */,
+				88FF204E2C11E15E00DFC8CC /* UIColor+Extension.swift */,
+				880A2E0A2C12CA7D005C564D /* UIImage+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		880A2E0D2C12F57E005C564D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				88B640CB2C11AC2700B62D80 /* TamaCollectionViewCell.swift */,
+				885727432C12FD15006B34F1 /* SettingTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		880A2E102C12F592005C564D /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				88FF20502C11E2F200DFC8CC /* TamaFont.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		880A2E112C12F5A6005C564D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				88B640CD2C11AC5500B62D80 /* ReusableProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		880A2E122C12F5AF005C564D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88B640CF2C11AEB300B62D80 /* Tamagotchi.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		880A2E132C12F5B6005C564D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				88B640B62C11A8EB00B62D80 /* ViewController.swift */,
+				88FF20522C11F0F000DFC8CC /* DetailViewController.swift */,
+				880A2E082C12BFED005C564D /* MainViewController.swift */,
+				885727412C12F710006B34F1 /* SettingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		88B640A62C11A8EB00B62D80 = {
 			isa = PBXGroup;
 			children = (
@@ -77,21 +135,17 @@
 		88B640B12C11A8EB00B62D80 /* Tamagotchi */ = {
 			isa = PBXGroup;
 			children = (
+				880A2E132C12F5B6005C564D /* ViewController */,
+				880A2E122C12F5AF005C564D /* Model */,
+				880A2E112C12F5A6005C564D /* Protocol */,
+				880A2E102C12F592005C564D /* Custom */,
+				880A2E0D2C12F57E005C564D /* Cell */,
+				880A2E0C2C12F573005C564D /* Extension */,
 				88B640B22C11A8EB00B62D80 /* AppDelegate.swift */,
 				88B640B42C11A8EB00B62D80 /* SceneDelegate.swift */,
-				88B640B62C11A8EB00B62D80 /* ViewController.swift */,
 				88B640BB2C11A8EC00B62D80 /* Assets.xcassets */,
 				88B640BD2C11A8EC00B62D80 /* LaunchScreen.storyboard */,
 				88B640C02C11A8EC00B62D80 /* Info.plist */,
-				88B640CB2C11AC2700B62D80 /* TamaCollectionViewCell.swift */,
-				88B640CD2C11AC5500B62D80 /* ReusableProtocol.swift */,
-				88B640CF2C11AEB300B62D80 /* Tamagotchi.swift */,
-				88FF204C2C11E0F700DFC8CC /* UIViewController+Extension.swift */,
-				88FF204E2C11E15E00DFC8CC /* UIColor+Extension.swift */,
-				88FF20502C11E2F200DFC8CC /* TamaFont.swift */,
-				88FF20522C11F0F000DFC8CC /* DetailViewController.swift */,
-				880A2E082C12BFED005C564D /* MainViewController.swift */,
-				880A2E0A2C12CA7D005C564D /* UIImage+Extension.swift */,
 			);
 			path = Tamagotchi;
 			sourceTree = "<group>";
@@ -175,7 +229,9 @@
 			files = (
 				88FF20532C11F0F000DFC8CC /* DetailViewController.swift in Sources */,
 				880A2E092C12BFED005C564D /* MainViewController.swift in Sources */,
+				885727442C12FD15006B34F1 /* SettingTableViewCell.swift in Sources */,
 				88B640B72C11A8EB00B62D80 /* ViewController.swift in Sources */,
+				885727422C12F710006B34F1 /* SettingViewController.swift in Sources */,
 				880A2E0B2C12CA7D005C564D /* UIImage+Extension.swift in Sources */,
 				88B640CC2C11AC2700B62D80 /* TamaCollectionViewCell.swift in Sources */,
 				88B640CE2C11AC5500B62D80 /* ReusableProtocol.swift in Sources */,

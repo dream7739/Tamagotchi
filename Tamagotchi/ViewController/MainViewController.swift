@@ -44,6 +44,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView("대장님의 다마고치")
+        configureNav()
         configureHierarchy()
         configureLayout()
         configureUI()
@@ -66,6 +67,17 @@ class MainViewController: UIViewController {
         waterStackVeiw.addArrangedSubview(waterButton)
     }
     
+    func configureNav(){
+        let setting = UIBarButtonItem(image: .profile, style: .plain, target: self, action: #selector(settingButtonClicked))
+        navigationItem.rightBarButtonItem = setting
+        navigationController?.navigationBar.tintColor = .contentColor
+    }
+    
+    @objc func settingButtonClicked(){
+        let vc = SettingViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
     func configureLayout(){
         bubbleImageView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(40)
