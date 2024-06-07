@@ -67,4 +67,18 @@ extension ViewController : UICollectionViewDataSource, UICollectionViewDelegateF
         return CGSize(width: width, height: height)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let tama = list[indexPath.row]
+        
+        if tama.type != .ready {
+            let detailVC = DetailViewController()
+            detailVC.tama = tama
+            
+            let nav = UINavigationController(rootViewController: detailVC)
+            nav.modalPresentationStyle = .overFullScreen
+            
+            present(nav, animated: true)
+        }
+    }
+    
 }

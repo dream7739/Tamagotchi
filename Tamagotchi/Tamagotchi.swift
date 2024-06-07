@@ -26,6 +26,19 @@ enum TamaType: Int, CaseIterable {
         }
     }
     
+    var desciption: String {
+        switch self {
+        case .tingle:
+            return "저는 \(tamaName)입니당 키는 30cm 몸무게는 130톤이에용!\n성격은 화끈하고 잘 날라다닙니다~\n열심히 잘먹고 잘 클 자신은 있답니다 따끔따끔"
+        case .smile:
+            return "저는 \(tamaName)입니당 키는 40cm 몸무게는 140톤이에용!\n성격은 화끈하고 잘 날라다닙니다~\n열심히 잘먹고 잘 클 자신은 있답니다 방실방실"
+        case .twinkle:
+            return "저는 \(tamaName)입니당 키는 50cm 몸무게는 150톤이에용!\n성격은 화끈하고 잘 날라다닙니다~\n열심히 잘먹고 잘 클 자신은 있답니다 반짝반짝"
+        case .ready:
+            return ""
+        }
+    }
+    
 }
 
 //다마고치는 이름이 있음
@@ -85,6 +98,33 @@ struct TamaResult {
         Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
         Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
         Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
-        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName), Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName), 
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName),
+        Tamagotchi(type: TamaType.ready, name: TamaType.ready.tamaName)
     ]
 }

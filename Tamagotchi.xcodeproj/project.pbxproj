@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880A2E092C12BFED005C564D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880A2E082C12BFED005C564D /* MainViewController.swift */; };
 		88B640B32C11A8EB00B62D80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B640B22C11A8EB00B62D80 /* AppDelegate.swift */; };
 		88B640B52C11A8EB00B62D80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B640B42C11A8EB00B62D80 /* SceneDelegate.swift */; };
 		88B640B72C11A8EB00B62D80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B640B62C11A8EB00B62D80 /* ViewController.swift */; };
@@ -20,9 +21,11 @@
 		88FF204D2C11E0F700DFC8CC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF204C2C11E0F700DFC8CC /* UIViewController+Extension.swift */; };
 		88FF204F2C11E15E00DFC8CC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF204E2C11E15E00DFC8CC /* UIColor+Extension.swift */; };
 		88FF20512C11E2F200DFC8CC /* TamaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF20502C11E2F200DFC8CC /* TamaFont.swift */; };
+		88FF20532C11F0F000DFC8CC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF20522C11F0F000DFC8CC /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		880A2E082C12BFED005C564D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		88B640AF2C11A8EB00B62D80 /* Tamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B640B22C11A8EB00B62D80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88B640B42C11A8EB00B62D80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 		88FF204C2C11E0F700DFC8CC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		88FF204E2C11E15E00DFC8CC /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		88FF20502C11E2F200DFC8CC /* TamaFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaFont.swift; sourceTree = "<group>"; };
+		88FF20522C11F0F000DFC8CC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				88FF204C2C11E0F700DFC8CC /* UIViewController+Extension.swift */,
 				88FF204E2C11E15E00DFC8CC /* UIColor+Extension.swift */,
 				88FF20502C11E2F200DFC8CC /* TamaFont.swift */,
+				88FF20522C11F0F000DFC8CC /* DetailViewController.swift */,
+				880A2E082C12BFED005C564D /* MainViewController.swift */,
 			);
 			path = Tamagotchi;
 			sourceTree = "<group>";
@@ -164,6 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FF20532C11F0F000DFC8CC /* DetailViewController.swift in Sources */,
+				880A2E092C12BFED005C564D /* MainViewController.swift in Sources */,
 				88B640B72C11A8EB00B62D80 /* ViewController.swift in Sources */,
 				88B640CC2C11AC2700B62D80 /* TamaCollectionViewCell.swift in Sources */,
 				88B640CE2C11AC5500B62D80 /* ReusableProtocol.swift in Sources */,
