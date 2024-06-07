@@ -51,8 +51,20 @@ enum TamaType: Int, CaseIterable {
 //모든 다마고치는 한명의 대장님을 가짐. 대장님은 바뀔 수 있음
 
 struct Tamagotchi {
+    
+    static let riceLimit = 99
+    
+    static let waterLimit = 49
+    
     var type: TamaType
+    
     var name: String
+    
+    var ment : String = "오늘은 왠지 기분이 좋아용"
+    
+    var description: String {
+        return "LV\(level) ᐧ 밥알 \(rice)개 ᐧ 물방울 \(water)개"
+    }
     
     var rice: Int = 0 {
         didSet{
@@ -64,12 +76,6 @@ struct Tamagotchi {
         didSet{
             ment = "\(TamaResult.ownerName)님 오늘 깃허브 푸시 하셨어용?"
         }
-    }
-    
-    var ment : String = "오늘은 왠지 기분이 좋아용"
-    
-    var description: String {
-        return "LV\(level) ᐧ 밥알 \(rice)개 ᐧ 물방울 \(water)개"
     }
     
     var level: Int {
@@ -88,7 +94,14 @@ struct Tamagotchi {
     
     
     var tamaImage: UIImage{
-        let imageName = "\(type.rawValue)-\(level)"
+        var imageName = ""
+
+        //레벨이 10일때는 이미지를 9레벨 이미지와 함께 사용(1-9, 2-9, 3-9)
+        if level < 10 {
+            imageName = "\(type.rawValue)-\(level)"
+        }else if level == 10 {
+            imageName = "\(type.rawValue)-\(level-1)"
+        }
         
         if let image = UIImage(named: imageName){
             return image
