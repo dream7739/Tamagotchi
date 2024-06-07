@@ -50,6 +50,10 @@ class SettingViewController: UIViewController {
     
     let settingTableView = UITableView()
     
+    override func viewWillAppear(_ animated: Bool) {
+        settingTableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView("설정")

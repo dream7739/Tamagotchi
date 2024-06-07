@@ -41,9 +41,12 @@ class MainViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        configureView("\(TamaResult.ownerName)님의 다마고치")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView("\(TamaResult.ownerName)님의 다마고치")
         configureNav()
         configureHierarchy()
         configureLayout()
