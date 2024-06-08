@@ -91,6 +91,8 @@
 		880A2E102C12F592005C564D /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				880924BB2C13FE010043C65A /* PaddingLabel.swift */,
+				880924BD2C1406980043C65A /* UnderLineTextField.swift */,
 				88FF20502C11E2F200DFC8CC /* TamaFont.swift */,
 			);
 			path = Custom;
@@ -108,8 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				88B640CF2C11AEB300B62D80 /* Tamagotchi.swift */,
-				880924BB2C13FE010043C65A /* PaddingLabel.swift */,
-				880924BD2C1406980043C65A /* UnderLineTextField.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
