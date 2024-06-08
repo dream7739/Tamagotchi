@@ -14,7 +14,7 @@ class DetailViewController : UIViewController {
     
     let tamaImageView = UIImageView()
     
-    let nameLabel = UILabel()
+    let nameLabel = PaddingLabel()
     
     let seperateLabel = UILabel()
     

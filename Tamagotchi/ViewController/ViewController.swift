@@ -61,7 +61,6 @@ extension ViewController : UICollectionViewDataSource, UICollectionViewDelegateF
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TamaCollectionViewCell.identifier, for: indexPath) as! TamaCollectionViewCell
-        
         let data = list[indexPath.row]
         cell.configureData(data)
         
@@ -71,7 +70,7 @@ extension ViewController : UICollectionViewDataSource, UICollectionViewDelegateF
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         let width = (collectionView.frame.size.width - 80) / 3
-        let height = (collectionView.frame.size.height - 80) / 5
+        let height = (collectionView.frame.size.height - 60) / 5
         return CGSize(width: width, height: height)
     }
     

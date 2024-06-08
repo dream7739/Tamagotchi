@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     
     let tamaImageView = UIImageView()
     
-    let nameLabel = UILabel()
+    let nameLabel = PaddingLabel()
     
     let descriptionLabel = UILabel()
     

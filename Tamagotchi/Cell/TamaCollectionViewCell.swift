@@ -12,7 +12,7 @@ class TamaCollectionViewCell: UICollectionViewCell {
     
     let tamaImageView = UIImageView()
     
-    let nameLabel = UILabel()
+    let nameLabel = PaddingLabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
