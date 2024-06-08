@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		880924BC2C13FE010043C65A /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880924BB2C13FE010043C65A /* PaddingLabel.swift */; };
+		880924BE2C1406980043C65A /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880924BD2C1406980043C65A /* UnderLineTextField.swift */; };
 		880A2E092C12BFED005C564D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880A2E082C12BFED005C564D /* MainViewController.swift */; };
 		880A2E0B2C12CA7D005C564D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880A2E0A2C12CA7D005C564D /* UIImage+Extension.swift */; };
 		885727422C12F710006B34F1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885727412C12F710006B34F1 /* SettingViewController.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		880924BB2C13FE010043C65A /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		880924BD2C1406980043C65A /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
 		880A2E082C12BFED005C564D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		880A2E0A2C12CA7D005C564D /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		885727412C12F710006B34F1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				88B640CF2C11AEB300B62D80 /* Tamagotchi.swift */,
 				880924BB2C13FE010043C65A /* PaddingLabel.swift */,
+				880924BD2C1406980043C65A /* UnderLineTextField.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				88B640B32C11A8EB00B62D80 /* AppDelegate.swift in Sources */,
 				885727462C1306E5006B34F1 /* OwnerViewController.swift in Sources */,
 				880924BC2C13FE010043C65A /* PaddingLabel.swift in Sources */,
+				880924BE2C1406980043C65A /* UnderLineTextField.swift in Sources */,
 				88FF204D2C11E0F700DFC8CC /* UIViewController+Extension.swift in Sources */,
 				88B640D02C11AEB300B62D80 /* Tamagotchi.swift in Sources */,
 				88FF20512C11E2F200DFC8CC /* TamaFont.swift in Sources */,

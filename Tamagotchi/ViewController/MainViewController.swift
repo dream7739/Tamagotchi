@@ -24,9 +24,9 @@ class MainViewController: UIViewController {
     
     let waterStackVeiw = UIStackView()
     
-    let riceTextField = UITextField()
+    let riceTextField = UnderLineTextField()
     
-    let waterTextField = UITextField()
+    let waterTextField = UnderLineTextField()
     
     let riceButton = UIButton(type: .system)
     
@@ -163,11 +163,8 @@ class MainViewController: UIViewController {
         riceStackView.axis = .horizontal
         riceStackView.spacing = 8
         
-        riceTextField.font = TamaFont.primary.medium()
         riceTextField.placeholder = "밥주세용"
         riceTextField.textAlignment = .center
-        riceTextField.tintColor = .contentColor
-        riceTextField.borderStyle = .roundedRect
         riceTextField.keyboardType = .numberPad
         
         riceButton.addTarget(self, action: #selector(riceButtonClicked), for: .touchUpInside)
@@ -181,11 +178,8 @@ class MainViewController: UIViewController {
         waterStackVeiw.axis = .horizontal
         waterStackVeiw.spacing = 8
         
-        waterTextField.font = TamaFont.primary.medium()
         waterTextField.placeholder = "물주세용"
         waterTextField.textAlignment = .center
-        waterTextField.tintColor = .contentColor
-        waterTextField.borderStyle = .roundedRect
         waterTextField.keyboardType = .numberPad
         
         waterButton.addTarget(self, action: #selector(waterButtonClicked), for: .touchUpInside)

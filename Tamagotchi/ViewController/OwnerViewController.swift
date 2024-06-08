@@ -10,7 +10,7 @@ import SnapKit
 
 class OwnerViewController: UIViewController {
     
-    let ownerTextField = UITextField()
+    let ownerTextField = UnderLineTextField()
     
     let validLabel = UILabel()
     
@@ -68,13 +68,9 @@ class OwnerViewController: UIViewController {
         
         ownerTextField.delegate = self
         
-        ownerTextField.borderStyle = .roundedRect
         ownerTextField.text = TamaManager.owner
         ownerTextField.placeholder = "대장님 이름을 입력해주세요"
-        ownerTextField.font = TamaFont.primary.medium()
-        ownerTextField.textColor = .contentColor
         ownerTextField.clearButtonMode = .whileEditing
-        ownerTextField.tintColor = .contentColor
         
         validLabel.font = TamaFont.secondary.regular()
         validLabel.textColor = .contentColor
