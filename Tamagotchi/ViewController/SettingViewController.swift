@@ -132,7 +132,9 @@ extension SettingViewController : UITableViewDataSource, UITableViewDelegate {
                 
                 self.removeData()
                 
-                self.view.window?.rootViewController = ViewController()
+                let vc = ViewController()
+                let nav = UINavigationController(rootViewController: vc)
+                self.view.window?.rootViewController = nav
                 
             }
             alert.addAction(cancelAction)
