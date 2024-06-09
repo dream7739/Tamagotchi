@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol TamaFeed {
+    func drinkWater(_ quantity: Int)
+    func eatRice(_ quantity: Int)
+}
+
 enum TamaType: Int, CaseIterable {
     case tingle = 1  //따끔따끔 다마고치
     case smile = 2   //방실방실 다마고치
@@ -41,46 +46,25 @@ enum TamaType: Int, CaseIterable {
     
 }
 
-//다마고치는 이름이 있음
-//다마고치는 레벨이 있음 (레벨은 1-10까지. 밥알 개수와 물방울 개수에 따라 성장)
-//수식 : (밥알개수 / 5) + (물방울 개수 / 2)
-//다마고치는 밥을 먹을 수 있음 = 처음엔 0
-//다마고치는 물을 먹을 수 있음 = 처음엔 0
-//다마고치는 이미지를 가짐. 이미지는 레벨에 따라 변경됨
-//다마고치는 멘트를 가짐. 멘트는 메인화면 / 밥먹을 때 / 물 마실 때에 따라 달라짐 (대장님 포함)
-//모든 다마고치는 한명의 대장님을 가짐. 대장님은 바뀔 수 있음
-
-class Tamagotchi {
+class Tamagotchi : TamaFeed {
     
     init(type: TamaType, name: String) {
         self.type = type
         self.name = name
     }
     
-    static let riceLimit = 99
-    
-    static let waterLimit = 49
-    
     var type: TamaType
     
     var name: String
+    
+    var rice: Int = 0
+    
+    var water: Int = 0
     
     var ment : String = "오늘은 왠지 기분이 좋아용"
     
     var description: String {
         return "LV\(level) ᐧ 밥알 \(rice)개 ᐧ 물방울 \(water)개"
-    }
-    
-    var rice: Int = 0 {
-        didSet{
-            ment = "\(TamaManager.owner)님 " + TamaResult.randomMent.randomElement()!
-        }
-    }
-    
-    var water: Int = 0 {
-        didSet{
-            ment = "\(TamaManager.owner)님 " + TamaResult.randomMent.randomElement()!
-        }
     }
     
     var level: Int {
@@ -96,7 +80,6 @@ class Tamagotchi {
             return 1
         }
     }
-    
     
     var tamaImage: UIImage{
         var imageName = ""
@@ -115,11 +98,25 @@ class Tamagotchi {
         }
     }
     
+    func drinkWater(_ quantity: Int) {
+        water += quantity
+        ment = "\(TamaManager.owner)님 " + TamaResult.randomMent.randomElement()!
+    }
+    
+    func eatRice(_ quantity: Int){
+        rice += quantity
+        ment = "\(TamaManager.owner)님 " + TamaResult.randomMent.randomElement()!
+    }
+    
+    
 }
 
-
 class TamaResult {
-    static var randomMent : [String] = [
+    static let riceLimit = 99
+    
+    static let waterLimit = 49
+    
+    static let randomMent : [String] = [
         "과제하셨어용?",
         "깃허브 푸시하셨어용?",
         "배고파용 ㅠㅠ 밥주세요",
@@ -135,7 +132,7 @@ class TamaResult {
         "오늘은 왠지 기분이 좋아용"
     ]
     
-    static var tamaList: [Tamagotchi] = [
+    static let tamaList: [Tamagotchi] = [
         Tamagotchi(type: TamaType.tingle, name: TamaType.tingle.tamaName),
         Tamagotchi(type: TamaType.smile, name: TamaType.smile.tamaName),
         Tamagotchi(type: TamaType.twinkle, name: TamaType.twinkle.tamaName),

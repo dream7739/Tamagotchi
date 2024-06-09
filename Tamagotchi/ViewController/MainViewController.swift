@@ -166,7 +166,6 @@ class MainViewController: UIViewController {
         riceTextField.placeholder = "밥주세용"
         riceTextField.textAlignment = .center
         riceTextField.keyboardType = .numberPad
-        
         riceButton.addTarget(self, action: #selector(riceButtonClicked), for: .touchUpInside)
         riceButton.setTitle("밥먹기", for: .normal)
         riceButton.setImage(.rice, for: .normal)
@@ -196,19 +195,22 @@ class MainViewController: UIViewController {
         
         let input = riceTextField.text!
         
+        let quantity: Int
+        
         if input.isEmpty {
-            tama.rice += 1
+            quantity = 1
         }else{
             riceTextField.text = ""
             
-            guard let quantity = Int(input), quantity <= Tamagotchi.riceLimit else {
-                alert("알림", "밥은 한번에 \(Tamagotchi.riceLimit)개까지 먹을 수 있어요", .alert)
+            guard let result = Int(input), result <= TamaResult.riceLimit else {
+                alert("알림", "밥은 한번에 \(TamaResult.riceLimit)개까지 먹을 수 있어요", .alert)
                 return
             }
             
-            tama.rice  += quantity
+            quantity = result
         }
         
+        tama.eatRice(quantity)
         updateUI()
     }
     
@@ -217,21 +219,23 @@ class MainViewController: UIViewController {
 
         let input = waterTextField.text!
         
+        let quantity: Int
+        
         if input.isEmpty {
-            tama.water += 1
+            quantity = 1
         }else{
             waterTextField.text = ""
             
-            guard let quantity = Int(input), quantity <= Tamagotchi.waterLimit else {
-                alert("알림", "물은 한번에 \(Tamagotchi.waterLimit)개까지 먹을 수 있어요", .alert)
+            guard let result = Int(input), result <= TamaResult.waterLimit else {
+                alert("알림", "물은 한번에 \(TamaResult.waterLimit)개까지 먹을 수 있어요", .alert)
                 return
             }
             
-            tama.water += quantity
+            quantity = result
         }
         
+        tama.drinkWater(quantity)
         updateUI()
-
     }
     
     func configureData(){
