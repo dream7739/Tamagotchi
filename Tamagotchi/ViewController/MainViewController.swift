@@ -36,7 +36,7 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         configureView(ViewType.main)
-        mentLabel.text = "\(TamaManager.owner)님 " + TamaResult.randomMent.randomElement()!
+        mentLabel.text = tama?.ment
     }
     
     override func viewDidLoad() {
@@ -166,6 +166,7 @@ class MainViewController: UIViewController {
         riceTextField.placeholder = "밥주세용"
         riceTextField.textAlignment = .center
         riceTextField.keyboardType = .numberPad
+        
         riceButton.addTarget(self, action: #selector(riceButtonClicked), for: .touchUpInside)
         riceButton.setTitle("밥먹기", for: .normal)
         riceButton.setImage(.rice, for: .normal)
@@ -194,14 +195,13 @@ class MainViewController: UIViewController {
         guard let tama else { return }
         
         let input = riceTextField.text!
-        
+        riceTextField.text = ""
+
         let quantity: Int
         
         if input.isEmpty {
             quantity = 1
         }else{
-            riceTextField.text = ""
-            
             guard let result = Int(input), result <= TamaResult.riceLimit else {
                 alert("알림", "밥은 한번에 \(TamaResult.riceLimit)개까지 먹을 수 있어요", .alert)
                 return
@@ -218,14 +218,13 @@ class MainViewController: UIViewController {
         guard let tama else { return }
 
         let input = waterTextField.text!
+        waterTextField.text = ""
         
         let quantity: Int
         
         if input.isEmpty {
             quantity = 1
         }else{
-            waterTextField.text = ""
-            
             guard let result = Int(input), result <= TamaResult.waterLimit else {
                 alert("알림", "물은 한번에 \(TamaResult.waterLimit)개까지 먹을 수 있어요", .alert)
                 return
@@ -243,6 +242,7 @@ class MainViewController: UIViewController {
         tamaImageView.image = tama.tamaImage
         nameLabel.text = tama.name
         descriptionLabel.text = tama.description
+        mentLabel.text = tama.ment
     }
     
     func updateUI(){

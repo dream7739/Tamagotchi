@@ -152,8 +152,7 @@ extension SettingViewController : UITableViewDataSource, UITableViewDelegate {
         
         for item in TamaResult.tamaList {
             if item.type != .ready {
-                item.water = 0
-                item.rice = 0
+                item.resetFeed()
             }
         }
     }

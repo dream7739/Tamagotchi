@@ -67,14 +67,17 @@ class OwnerViewController: UIViewController {
     func configureUI(){
         
         ownerTextField.delegate = self
-        
+        ownerTextField.becomeFirstResponder()
         ownerTextField.text = TamaManager.owner
         ownerTextField.placeholder = "대장님 이름을 입력해주세요"
         ownerTextField.clearButtonMode = .whileEditing
         
         validLabel.font = TamaFont.secondary.regular()
         validLabel.textColor = .contentColor
-        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     

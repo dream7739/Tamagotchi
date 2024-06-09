@@ -10,6 +10,7 @@ import UIKit
 protocol TamaFeed {
     func drinkWater(_ quantity: Int)
     func eatRice(_ quantity: Int)
+    func resetFeed()
 }
 
 enum TamaType: Int, CaseIterable {
@@ -46,7 +47,7 @@ enum TamaType: Int, CaseIterable {
     
 }
 
-class Tamagotchi : TamaFeed {
+class Tamagotchi: TamaFeed {
     
     init(type: TamaType, name: String) {
         self.type = type
@@ -61,7 +62,9 @@ class Tamagotchi : TamaFeed {
     
     var water: Int = 0
     
-    var ment : String = "오늘은 왠지 기분이 좋아용"
+    var ment : String {
+        return "\(TamaManager.owner)님 " + TamaResult.randomMent.randomElement()!
+    }
     
     var description: String {
         return "LV\(level) ᐧ 밥알 \(rice)개 ᐧ 물방울 \(water)개"
@@ -100,14 +103,16 @@ class Tamagotchi : TamaFeed {
     
     func drinkWater(_ quantity: Int) {
         water += quantity
-        ment = "\(TamaManager.owner)님 " + TamaResult.randomMent.randomElement()!
     }
     
     func eatRice(_ quantity: Int){
         rice += quantity
-        ment = "\(TamaManager.owner)님 " + TamaResult.randomMent.randomElement()!
     }
     
+    func resetFeed(){
+        water = 0
+        rice = 0
+    }
     
 }
 
