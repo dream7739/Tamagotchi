@@ -35,7 +35,7 @@ class MainViewController: UIViewController {
     var tama: Tamagotchi?
     
     override func viewWillAppear(_ animated: Bool) {
-        configureView(ViewType.main.title)
+        configureView(ViewType.main)
         mentLabel.text = "\(TamaManager.owner)님 " + TamaResult.randomMent.randomElement()!
     }
     

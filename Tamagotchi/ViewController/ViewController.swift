@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView(viewType.title)
+        configureView(viewType)
         configureHierarchy()
         configureLayout()
         configureUI()

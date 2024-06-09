@@ -31,8 +31,8 @@ enum ViewType {
 }
 
 extension UIViewController {
-    func configureView(_ title: String){
-        navigationItem.title = title
+    func configureView(_ type: ViewType){
+        navigationItem.title = type.title
         view.backgroundColor = .themeColor
     }
     

@@ -16,7 +16,7 @@ class OwnerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView(ViewType.owner.title)
+        configureView(ViewType.owner)
         configureNav()
         configureHierarchy()
         configureLayout()
