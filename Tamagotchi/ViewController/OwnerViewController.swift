@@ -16,7 +16,7 @@ class OwnerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView("대장님 이름 정하기")
+        configureView(ViewType.owner.title)
         configureNav()
         configureHierarchy()
         configureLayout()

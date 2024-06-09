@@ -56,7 +56,7 @@ class SettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView("설정")
+        configureView(ViewType.setting.title)
         configureNav()
         configureHierarchy()
         configureLayout()

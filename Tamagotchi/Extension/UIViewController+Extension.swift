@@ -7,6 +7,29 @@
 
 import UIKit
 
+enum ViewType {
+    case select
+    case edit
+    case main
+    case setting
+    case owner
+    
+    var title: String {
+        switch self {
+        case .select:
+            return "다마고치 선택하기"
+        case .edit:
+            return  "다마고치 변경하기"
+        case .main:
+            return "\(TamaManager.owner)님의 다마고치"
+        case .setting:
+            return "설정"
+        case .owner:
+            return "대장님 이름 정하기"
+        }
+    }
+}
+
 extension UIViewController {
     func configureView(_ title: String){
         navigationItem.title = title
