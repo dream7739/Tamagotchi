@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     let list = TamaResult.tamaList
     
-    var viewType: ViewType = .select
+    var viewType: Constant.ViewType = .select
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         tamaCollectionView.dataSource = self
         tamaCollectionView.register(TamaCollectionViewCell.self, forCellWithReuseIdentifier: TamaCollectionViewCell.identifier)
         
-        tamaCollectionView.backgroundColor = .themeColor
+        tamaCollectionView.backgroundColor = Constant.Color.themeColor
         tamaCollectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
 
     }

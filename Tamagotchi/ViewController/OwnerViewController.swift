@@ -16,7 +16,7 @@ class OwnerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView(ViewType.owner)
+        configureView(Constant.ViewType.owner)
         configureNav()
         configureHierarchy()
         configureLayout()
@@ -26,7 +26,7 @@ class OwnerViewController: UIViewController {
     func configureNav(){
         let item = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(saveButtonClicked))
         navigationItem.rightBarButtonItem = item
-        navigationController?.navigationBar.tintColor = .contentColor
+        navigationController?.navigationBar.tintColor = Constant.Color.contentColor
     }
     
     @objc func saveButtonClicked(){
@@ -73,7 +73,7 @@ class OwnerViewController: UIViewController {
         ownerTextField.clearButtonMode = .whileEditing
         
         validLabel.font = TamaFont.secondary.regular()
-        validLabel.textColor = .contentColor
+        validLabel.textColor = Constant.Color.contentColor
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

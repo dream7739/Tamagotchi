@@ -10,7 +10,7 @@
 		880924BC2C13FE010043C65A /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880924BB2C13FE010043C65A /* PaddingLabel.swift */; };
 		880924BE2C1406980043C65A /* UnderLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880924BD2C1406980043C65A /* UnderLineTextField.swift */; };
 		880A2E092C12BFED005C564D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880A2E082C12BFED005C564D /* MainViewController.swift */; };
-		880A2E0B2C12CA7D005C564D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880A2E0A2C12CA7D005C564D /* UIImage+Extension.swift */; };
+		884D3FD62C19D02600266229 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884D3FD52C19D02600266229 /* Constant.swift */; };
 		885727422C12F710006B34F1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885727412C12F710006B34F1 /* SettingViewController.swift */; };
 		885727442C12FD15006B34F1 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885727432C12FD15006B34F1 /* SettingTableViewCell.swift */; };
 		885727462C1306E5006B34F1 /* OwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885727452C1306E5006B34F1 /* OwnerViewController.swift */; };
@@ -26,7 +26,6 @@
 		88B640D02C11AEB300B62D80 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B640CF2C11AEB300B62D80 /* Tamagotchi.swift */; };
 		88BBFB442C1336280044FD06 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BBFB432C1336280044FD06 /* UserDefaultsManager.swift */; };
 		88FF204D2C11E0F700DFC8CC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF204C2C11E0F700DFC8CC /* UIViewController+Extension.swift */; };
-		88FF204F2C11E15E00DFC8CC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF204E2C11E15E00DFC8CC /* UIColor+Extension.swift */; };
 		88FF20512C11E2F200DFC8CC /* TamaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF20502C11E2F200DFC8CC /* TamaFont.swift */; };
 		88FF20532C11F0F000DFC8CC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF20522C11F0F000DFC8CC /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +34,7 @@
 		880924BB2C13FE010043C65A /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		880924BD2C1406980043C65A /* UnderLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLineTextField.swift; sourceTree = "<group>"; };
 		880A2E082C12BFED005C564D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		880A2E0A2C12CA7D005C564D /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		884D3FD52C19D02600266229 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		885727412C12F710006B34F1 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		885727432C12FD15006B34F1 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		885727452C1306E5006B34F1 /* OwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +51,6 @@
 		88B640CF2C11AEB300B62D80 /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
 		88BBFB432C1336280044FD06 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		88FF204C2C11E0F700DFC8CC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		88FF204E2C11E15E00DFC8CC /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		88FF20502C11E2F200DFC8CC /* TamaFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaFont.swift; sourceTree = "<group>"; };
 		88FF20522C11F0F000DFC8CC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,8 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				88FF204C2C11E0F700DFC8CC /* UIViewController+Extension.swift */,
-				88FF204E2C11E15E00DFC8CC /* UIColor+Extension.swift */,
-				880A2E0A2C12CA7D005C564D /* UIImage+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -126,6 +122,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		884D3FD42C19D01A00266229 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				884D3FD52C19D02600266229 /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		88B640A62C11A8EB00B62D80 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				88BBFB432C1336280044FD06 /* UserDefaultsManager.swift */,
+				884D3FD42C19D01A00266229 /* Constant */,
 				880A2E132C12F5B6005C564D /* ViewController */,
 				880A2E122C12F5AF005C564D /* Model */,
 				880A2E112C12F5A6005C564D /* Protocol */,
@@ -244,9 +249,9 @@
 				885727442C12FD15006B34F1 /* SettingTableViewCell.swift in Sources */,
 				88B640B72C11A8EB00B62D80 /* ViewController.swift in Sources */,
 				885727422C12F710006B34F1 /* SettingViewController.swift in Sources */,
-				880A2E0B2C12CA7D005C564D /* UIImage+Extension.swift in Sources */,
 				88BBFB442C1336280044FD06 /* UserDefaultsManager.swift in Sources */,
 				88B640CC2C11AC2700B62D80 /* TamaCollectionViewCell.swift in Sources */,
+				884D3FD62C19D02600266229 /* Constant.swift in Sources */,
 				88B640CE2C11AC5500B62D80 /* ReusableProtocol.swift in Sources */,
 				88B640B32C11A8EB00B62D80 /* AppDelegate.swift in Sources */,
 				885727462C1306E5006B34F1 /* OwnerViewController.swift in Sources */,
@@ -256,7 +261,6 @@
 				88B640D02C11AEB300B62D80 /* Tamagotchi.swift in Sources */,
 				88FF20512C11E2F200DFC8CC /* TamaFont.swift in Sources */,
 				88B640B52C11A8EB00B62D80 /* SceneDelegate.swift in Sources */,
-				88FF204F2C11E15E00DFC8CC /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

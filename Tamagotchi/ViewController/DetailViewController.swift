@@ -93,33 +93,33 @@ class DetailViewController : UIViewController {
     func configureUI(){
         view.backgroundColor = .black.withAlphaComponent(0.3)
         
-        tamaView.backgroundColor = .themeColor
+        tamaView.backgroundColor = Constant.Color.themeColor
         tamaView.layer.cornerRadius = 6
         
         tamaImageView.contentMode = .scaleAspectFill
         
         nameLabel.layer.cornerRadius = 5
         nameLabel.layer.borderWidth = 1
-        nameLabel.layer.borderColor = UIColor.contentColor.cgColor
+        nameLabel.layer.borderColor = Constant.Color.contentColor.cgColor
         nameLabel.textAlignment = .center
         nameLabel.font = TamaFont.primary.bold()
-        nameLabel.textColor = .contentColor
+        nameLabel.textColor = Constant.Color.contentColor
         
-        seperateLabel.backgroundColor = .contentColor
+        seperateLabel.backgroundColor = Constant.Color.contentColor
         
         descriptionLabel.font = TamaFont.primary.medium()
-        descriptionLabel.textColor = .contentColor
+        descriptionLabel.textColor = Constant.Color.contentColor
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .center
         
         cancelButton.addTarget(self, action: #selector(cancelButtonClicked), for: .touchUpInside)
         cancelButton.setTitle("취소", for: .normal)
-        cancelButton.tintColor = .contentColor
-        cancelButton.backgroundColor = .contentColor.withAlphaComponent(0.1)
+        cancelButton.tintColor = Constant.Color.contentColor
+        cancelButton.backgroundColor = Constant.Color.contentColor.withAlphaComponent(0.1)
         
         startButton.addTarget(self, action: #selector(startButtonClicked), for: .touchUpInside)
         startButton.setTitle("시작하기", for: .normal)
-        startButton.tintColor = .contentColor
+        startButton.tintColor = Constant.Color.contentColor
         
     }
     

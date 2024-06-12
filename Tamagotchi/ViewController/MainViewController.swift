@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     let tamaImageView = UIImageView()
     
     let nameLabel = PaddingLabel()
-    
+
     let descriptionLabel = UILabel()
     
     let riceStackView = UIStackView()
@@ -35,7 +35,7 @@ class MainViewController: UIViewController {
     var tama: Tamagotchi?
     
     override func viewWillAppear(_ animated: Bool) {
-        configureView(ViewType.main)
+        configureView(Constant.ViewType.main)
         mentLabel.text = tama?.ment
     }
     
@@ -65,9 +65,9 @@ class MainViewController: UIViewController {
     }
     
     func configureNav(){
-        let setting = UIBarButtonItem(image: .profile, style: .plain, target: self, action: #selector(settingButtonClicked))
+        let setting = UIBarButtonItem(image: Constant.Image.profile, style: .plain, target: self, action: #selector(settingButtonClicked))
         navigationItem.rightBarButtonItem = setting
-        navigationController?.navigationBar.tintColor = .contentColor
+        navigationController?.navigationBar.tintColor = Constant.Color.contentColor
     }
     
     @objc func settingButtonClicked(){
@@ -140,10 +140,10 @@ class MainViewController: UIViewController {
     
     func configureUI(){
         bubbleImageView.contentMode = .scaleToFill
-        bubbleImageView.image = .bubbleBox
+        bubbleImageView.image = Constant.Image.bubbleBox
         
         mentLabel.font = TamaFont.primary.bold()
-        mentLabel.textColor = .contentColor
+        mentLabel.textColor = Constant.Color.contentColor
         mentLabel.textAlignment = .center
         mentLabel.numberOfLines = 0
         
@@ -151,14 +151,14 @@ class MainViewController: UIViewController {
         
         nameLabel.layer.cornerRadius = 5
         nameLabel.layer.borderWidth = 1
-        nameLabel.layer.borderColor = UIColor.contentColor.cgColor
+        nameLabel.layer.borderColor = Constant.Color.contentColor.cgColor
         nameLabel.textAlignment = .center
         nameLabel.font = TamaFont.primary.bold()
-        nameLabel.textColor = .contentColor
+        nameLabel.textColor = Constant.Color.contentColor
         
         descriptionLabel.textAlignment = .center
         descriptionLabel.font = TamaFont.secondary.bold()
-        descriptionLabel.textColor = .contentColor
+        descriptionLabel.textColor = Constant.Color.contentColor
         
         riceStackView.axis = .horizontal
         riceStackView.spacing = 8
@@ -169,11 +169,11 @@ class MainViewController: UIViewController {
         
         riceButton.addTarget(self, action: #selector(riceButtonClicked), for: .touchUpInside)
         riceButton.setTitle("밥먹기", for: .normal)
-        riceButton.setImage(.rice, for: .normal)
-        riceButton.tintColor = .contentColor
+        riceButton.setImage(Constant.Image.rice, for: .normal)
+        riceButton.tintColor = Constant.Color.contentColor
         riceButton.layer.cornerRadius = 5
         riceButton.layer.borderWidth = 1.3
-        riceButton.layer.borderColor = UIColor.contentColor.cgColor
+        riceButton.layer.borderColor = Constant.Color.contentColor.cgColor
         
         waterStackVeiw.axis = .horizontal
         waterStackVeiw.spacing = 8
@@ -184,11 +184,11 @@ class MainViewController: UIViewController {
         
         waterButton.addTarget(self, action: #selector(waterButtonClicked), for: .touchUpInside)
         waterButton.setTitle("물먹기", for: .normal)
-        waterButton.setImage(.water, for: .normal)
-        waterButton.tintColor = .contentColor
+        waterButton.setImage(Constant.Image.water, for: .normal)
+        waterButton.tintColor = Constant.Color.contentColor
         waterButton.layer.cornerRadius = 5
         waterButton.layer.borderWidth = 1.3
-        waterButton.layer.borderColor = UIColor.contentColor.cgColor
+        waterButton.layer.borderColor = Constant.Color.contentColor.cgColor
     }
     
     @objc func riceButtonClicked(){

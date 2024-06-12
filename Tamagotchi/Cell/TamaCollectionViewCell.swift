@@ -49,10 +49,10 @@ class TamaCollectionViewCell: UICollectionViewCell {
         
         nameLabel.layer.cornerRadius = 5
         nameLabel.layer.borderWidth = 1
-        nameLabel.layer.borderColor = UIColor.contentColor.cgColor
+        nameLabel.layer.borderColor = Constant.Color.contentColor.cgColor
         nameLabel.textAlignment = .center
         nameLabel.font = TamaFont.secondary.medium()
-        nameLabel.textColor = .contentColor
+        nameLabel.textColor = Constant.Color.contentColor
     }
     
     func configureData(_ data : Tamagotchi){

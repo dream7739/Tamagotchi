@@ -12,7 +12,7 @@ class SettingTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .value1, reuseIdentifier: reuseIdentifier)
         accessoryType = .disclosureIndicator
-        backgroundColor = .themeColor
+        backgroundColor = Constant.Color.themeColor
         separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     

@@ -117,6 +117,8 @@ class Tamagotchi: TamaFeed {
 }
 
 class TamaResult {
+    private init(){ }
+    
     static let riceLimit = 99
     
     static let waterLimit = 49

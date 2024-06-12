@@ -24,10 +24,10 @@ class UnderLineTextField : UITextField {
         }
         
         font = TamaFont.primary.medium()
-        tintColor = .contentColor
-        textColor = .contentColor
+        tintColor = Constant.Color.contentColor
+        textColor = Constant.Color.contentColor
 
-        underLineView.backgroundColor = .contentColor
+        underLineView.backgroundColor = Constant.Color.contentColor
     }
     
     required init?(coder: NSCoder) {

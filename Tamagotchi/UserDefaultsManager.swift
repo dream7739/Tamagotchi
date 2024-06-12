@@ -28,6 +28,9 @@ struct UserDefaultsManager<T> {
 //처음인지, 아닌지
 //주인 이름
 class TamaManager {
+    
+    private init(){ }
+    
     @UserDefaultsManager(defaultValue: "주인", storage: .standard, key: "owner")
     static var owner: String
     

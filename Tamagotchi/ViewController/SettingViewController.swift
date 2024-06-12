@@ -36,11 +36,11 @@ enum Setting : Int, CaseIterable {
     var image : UIImage {
         switch self {
         case .name:
-            return .nameIcon
+            return Constant.Image.nameIcon
         case .change:
-            return .changeIcon
+            return Constant.Image.changeIcon
         case .reset:
-            return .resetIcon
+            return Constant.Image.resetIcon
         }
     }
     
@@ -56,7 +56,7 @@ class SettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView(ViewType.setting)
+        configureView(Constant.ViewType.setting)
         configureNav()
         configureHierarchy()
         configureLayout()
@@ -65,9 +65,9 @@ class SettingViewController: UIViewController {
     }
     
     func configureNav(){
-        let item = UIBarButtonItem(image: .back, style: .plain, target: self, action: #selector(backButtonClicked))
+        let item = UIBarButtonItem(image: Constant.Image.back, style: .plain, target: self, action: #selector(backButtonClicked))
         navigationItem.leftBarButtonItem = item
-        navigationController?.navigationBar.tintColor = .contentColor
+        navigationController?.navigationBar.tintColor = Constant.Color.contentColor
     }
     
     @objc func backButtonClicked(){
@@ -85,8 +85,8 @@ class SettingViewController: UIViewController {
     }
     
     func configureUI(){
-        settingTableView.backgroundColor = .themeColor
-        settingTableView.tintColor = .contentColor
+        settingTableView.backgroundColor = Constant.Color.themeColor
+        settingTableView.tintColor = Constant.Color.contentColor
     }
     
     func configureTableView(){
